@@ -28,18 +28,18 @@ function createCustomPostTypes() {
 // Hooking up our function to theme setup
 add_action( 'init', 'createCustomPostTypes' );
 
-function addAcfColumnsCustomers( $columns ) {
-    return array_merge($columns, [
-        'phone_number' => __ ( 'Phone Number' ),
-    ]);
-}
-add_filter( 'manage_customers_posts_columns', 'addAcfColumnsCustomers' );
-
-function addAcfColumnsDataCustomers( $column, $post_id ) {
-    switch ( $column ) {
-        case 'phone_number':
-            echo get_post_meta ( $post_id, 'phone_number', true );
-            break;
-    }
-}
-add_action ( 'manage_customers_posts_custom_column', 'addAcfColumnsDataCustomers', 10, 2 );
+// function addAcfColumnsCustomers( $columns ) {
+//     return array_merge($columns, [
+//         'phone_number' => __ ( 'Phone Number' ),
+//     ]);
+// }
+// add_filter( 'manage_customers_posts_columns', 'addAcfColumnsCustomers' );
+//
+// function addAcfColumnsDataCustomers( $column, $post_id ) {
+//     switch ( $column ) {
+//         case 'phone_number':
+//             echo get_post_meta ( $post_id, 'phone_number', true );
+//             break;
+//     }
+// }
+// add_action ( 'manage_customers_posts_custom_column', 'addAcfColumnsDataCustomers', 10, 2 );
