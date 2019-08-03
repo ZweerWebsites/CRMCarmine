@@ -18,7 +18,7 @@
     }
   }],
   "require": {
-    "php": ">=5.3.0",
+    "php": ">=7.3.2",
     "wordpress": "^5.2.2",
     "fancyguy/webroot-installer": "1.0.0",
     "vlucas/phpdotenv": "^2.4"

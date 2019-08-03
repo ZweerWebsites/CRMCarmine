@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "546128b2e5c75ab6fa4364be5d94f972",
+    "content-hash": "6ccd62a52de32a9805c9a79e22a90973",
     "packages": [
         {
             "name": "fancyguy/webroot-installer",
@@ -224,7 +224,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3.0"
+        "php": ">=7.3.2"
     },
     "platform-dev": []
 }
