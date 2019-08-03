@@ -1,1 +1,29 @@
 <?php
+
+function createCustomPostTypes() {
+    register_post_type('customers', [
+        'labels' => [
+            'name' => __( 'Customers' ),
+            'singular_name' => __( 'Customer' ),
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'movies'],
+        'menu_icon' => 'dashicons-admin-users',
+        'supports' => ['title'],
+    ]);
+
+    register_post_type('repairs', [
+        'labels' => [
+            'name' => __( 'Repairs' ),
+            'singular_name' => __( 'Repair' ),
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'repairs'],
+        'menu_icon' => 'dashicons-admin-tools',
+        'supports' => ['title'],
+    ]);
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'createCustomPostTypes' );
